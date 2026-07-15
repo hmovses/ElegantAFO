@@ -1125,6 +1125,12 @@ ul {
     display: flex;
   }
 
+  .site-header {
+    overflow: visible !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   .nav-links {
     position: fixed;
     top: var(--nav-height);
@@ -1138,7 +1144,7 @@ ul {
     gap: var(--space-sm);
     transform: translateX(100%);
     transition: transform var(--transition-base);
-    z-index: 1100;
+    z-index: 9999;
     overflow-y: auto;
   }
 
