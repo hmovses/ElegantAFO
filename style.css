@@ -1131,10 +1131,11 @@ ul {
     align-items: stretch;
     padding: var(--space-lg);
     background-color: var(--bg-body);
+    background-color: var(--bg-body) !important;
     gap: var(--space-sm);
     transform: translateX(100%);
     transition: transform var(--transition-base);
-    z-index: 999;
+    z-index: 1100;
     overflow-y: auto;
   }
 
