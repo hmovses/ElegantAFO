@@ -1,0 +1,68 @@
+PRODUCT DESCRIPTIONS BACKUP (Original)
+=======================================
+
+ARTICULATED GAUNTLET
+--------------------
+Title: Articulated Gauntlet
+Tagline: Controlled Ankle Mobility
+Description: A gauntlet-style AFO with precision articulation at the ankle joint, allowing controlled dorsiflexion while providing medial-lateral stability. Ideal for patients who benefit from guided ankle movement during the gait cycle.
+Learn More:
+- Indications: Moderate drop foot, post-stroke hemiplegia, peroneal nerve palsy
+- Features adjustable ankle joint with configurable range-of-motion stops
+- Padded gauntlet cuff distributes pressure evenly for all-day comfort
+- Compatible with most shoe types including athletic footwear
+
+BALANCE BRACE
+-------------
+Title: Balance Brace
+Tagline: Stability & Fall Prevention
+Description: Lightweight support brace designed to improve balance and reduce fall risk for patients with mild instability. Subtle posterior leaf design provides dynamic toe clearance during swing phase without restricting natural ankle movement.
+Learn More:
+- Indications: Mild imbalance, aging-related gait instability, early neuropathy
+- Ultra-thin profile fits discreetly inside most footwear
+- Flexible posterior strut provides spring-assisted toe lift
+- Minimal break-in period with immediate functional benefit
+
+EXTENDED HALF & HALF
+--------------------
+Title: Extended Half & Half
+Tagline: Dual-Zone Support
+Description: Hybrid design combining a rigid medial strut with a flexible lateral component, delivering targeted support where needed most. The extended calf coverage provides superior leverage for patients with proximal muscle weakness.
+Learn More:
+- Indications: Medial instability, posterior tibial tendon dysfunction, complex gait
+- Asymmetric construction provides zone-specific rigidity and flexibility
+- Extended proximal trim line enhances control above the ankle
+- Precision-molded from 3D scan data for anatomical accuracy
+
+EXTENDED UNWEIGHTING
+--------------------
+Title: Extended Unweighting
+Tagline: Pressure Redistribution
+Description: Engineered for patients requiring significant plantar pressure relief. The extended design redistributes load across the entire lower limb, reducing focal pressure points and promoting healing for diabetic ulcers and complex wounds.
+Learn More:
+- Indications: Diabetic foot ulcers, Charcot arthropathy, post-surgical offloading
+- Full-length total contact design maximizes pressure distribution
+- Extended supra-malleolar trim provides medial-lateral control
+- Compatible with removable cast walkers and post-operative footwear
+
+STANDARD LEATHER GAUNTLET
+-------------------------
+Title: Standard Leather Gauntlet
+Tagline: Classic Durability & Comfort
+Description: Time-tested leather gauntlet construction offers a balance of rigid support and supple comfort. The padded leather cuff conforms to the leg over time, providing a personalized fit that improves with wear.
+Learn More:
+- Indications: Chronic ankle instability, moderate spasticity, long-term bracing needs
+- Premium leather construction with moisture-wicking lining
+- Velcro closure system allows easy donning and doffing
+- Durable design built for extended daily wear
+
+TALL GAUNTLET
+-------------
+Title: Tall Gauntlet
+Tagline: Maximum Proximal Control
+Description: Extended-height gauntlet reaching below the knee for superior leverage and control of the entire lower leg. Essential for patients with proximal weakness, significant spasticity, or those requiring maximum stability throughout the gait cycle.
+Learn More:
+- Indications: Severe spasticity, high-level SCI, advanced stroke rehabilitation
+- Below-knee height provides maximum rotational and angular control
+- Articulated or rigid options available based on clinical needs
+- Custom-fitted with pressure-relief padding at bony prominences

@@ -13,7 +13,6 @@
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navLinks = document.getElementById("primary-nav");
   const navLinkItems = document.querySelectorAll(".nav-link");
-  const learnMoreButtons = document.querySelectorAll(".btn-learn-more");
   const appointmentForm = document.getElementById("appointmentForm");
   const formSuccess = document.getElementById("formSuccess");
 
@@ -128,26 +127,6 @@
 
   window.addEventListener("scroll", highlightActiveNav, { passive: true });
   highlightActiveNav();
-
-  /* ----------------------------------------------------------
-     5. PRODUCT "LEARN MORE" TOGGLES
-     ---------------------------------------------------------- */
-  learnMoreButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const targetId = btn.getAttribute("aria-controls");
-      const target = document.getElementById(targetId);
-      if (!target) return;
-
-      const isExpanded = btn.getAttribute("aria-expanded") === "true";
-      btn.setAttribute("aria-expanded", String(!isExpanded));
-
-      if (isExpanded) {
-        target.hidden = true;
-      } else {
-        target.hidden = false;
-      }
-    });
-  });
 
   /* ----------------------------------------------------------
      6. APPOINTMENT FORM VALIDATION

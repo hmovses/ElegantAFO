@@ -180,6 +180,7 @@ ul {
   font-size: 1.125rem;
   color: var(--text-secondary);
   max-width: 640px;
+  margin-inline: auto;
   margin-bottom: var(--space-2xl);
   line-height: 1.7;
 }
@@ -520,6 +521,12 @@ ul {
   align-items: start;
 }
 
+.about-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .about-text p {
   color: var(--text-secondary);
   margin-bottom: var(--space-lg);
@@ -603,6 +610,10 @@ ul {
   background-color: var(--bg-body);
 }
 
+.products-header {
+  text-align: center;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -679,37 +690,22 @@ ul {
   margin-bottom: var(--space-lg);
 }
 
-.btn-learn-more {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  padding: 0;
-  background: none;
-  border: none;
-  font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--action-blue);
-  cursor: pointer;
-  transition: color var(--transition-fast);
-}
-
-.btn-learn-more:hover {
-  color: var(--action-blue-hover);
-}
-
-.btn-learn-more .chevron {
-  transition: transform var(--transition-base);
-}
-
-.btn-learn-more[aria-expanded="true"] .chevron {
-  transform: rotate(180deg);
-}
-
 .product-details {
   margin-top: var(--space-lg);
   padding-top: var(--space-lg);
   border-top: 1px solid var(--border-light);
+}
+
+.product-details h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.product-details h4:first-child {
+  margin-top: 0;
 }
 
 .product-details ul {
@@ -746,6 +742,10 @@ ul {
    ============================================================ */
 .process {
   background-color: var(--bg-section-alt);
+}
+
+.process-header {
+  text-align: center;
 }
 
 .stepper {
@@ -976,6 +976,10 @@ ul {
 }
 
 /* Success Message */
+.form-success[hidden] {
+  display: none;
+}
+
 .form-success {
   display: flex;
   align-items: flex-start;
@@ -1079,28 +1083,6 @@ ul {
 .footer-bottom p {
   font-size: 0.8rem;
   color: var(--text-on-dark-muted);
-}
-
-/* ============================================================
-   ANIMATIONS & TRANSITIONS
-   ============================================================ */
-.product-details {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--transition-base);
-}
-
-.product-details[hidden] {
-  display: grid;
-  grid-template-rows: 0fr;
-}
-
-.product-details:not([hidden]) {
-  grid-template-rows: 1fr;
-}
-
-.product-details > * {
-  overflow: hidden;
 }
 
 /* ============================================================
@@ -1260,8 +1242,7 @@ ul {
   .site-header,
   .theme-toggle,
   .mobile-menu-btn,
-  .hero-actions,
-  .btn-learn-more {
+  .hero-actions {
     display: none;
   }
 
