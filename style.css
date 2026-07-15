@@ -1134,13 +1134,16 @@ ul {
     flex-direction: column;
     align-items: stretch;
     padding: var(--space-lg);
-    background-color: var(--bg-body);
-    background-color: var(--bg-body) !important;
+    background: #FFFFFF;
     gap: var(--space-sm);
     transform: translateX(100%);
     transition: transform var(--transition-base);
     z-index: 1100;
     overflow-y: auto;
+  }
+
+  [data-theme="dark"] .nav-links {
+    background: #0B1120;
   }
 
   .nav-links.is-open {
