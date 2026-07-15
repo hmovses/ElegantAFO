@@ -256,6 +256,10 @@ ul {
   height: var(--nav-height);
 }
 
+.site-header.menu-open {
+  z-index: 2000;
+}
+
 .navbar {
   height: 100%;
 }

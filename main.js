@@ -9,6 +9,7 @@
      1. DOM REFERENCES
      ---------------------------------------------------------- */
   const html = document.documentElement;
+  const header = document.querySelector(".site-header");
   const themeToggle = document.getElementById("themeToggle");
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navLinks = document.getElementById("primary-nav");
@@ -69,6 +70,7 @@
     const isOpen = mobileMenuBtn.getAttribute("aria-expanded") === "true";
     mobileMenuBtn.setAttribute("aria-expanded", String(!isOpen));
     navLinks.classList.toggle("is-open");
+    header.classList.toggle("menu-open");
 
     // Trap focus or prevent scroll when open
     if (!isOpen) {
@@ -81,6 +83,7 @@
   function closeMobileMenu() {
     mobileMenuBtn.setAttribute("aria-expanded", "false");
     navLinks.classList.remove("is-open");
+    header.classList.remove("menu-open");
     document.body.style.overflow = "";
   }
 
