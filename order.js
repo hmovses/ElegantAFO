@@ -4,7 +4,6 @@
   var currentFormType = null;
   var currentStep = 1;
 
-  var formCards = document.querySelectorAll(".form-card");
   var cardGrid = document.getElementById("formCardGrid");
   var formSection = document.getElementById("orderFormSection");
   var orderForm = document.getElementById("orderForm");
@@ -118,21 +117,30 @@
 
   // ----- CARD CLICK → TRANSITION TO FORM -----
 
-  formCards.forEach(function (card) {
-    card.addEventListener("click", function () {
-      var formType = this.dataset.form;
+  function startForm(formType) {
+    cardGrid.classList.add("exiting");
+    setTimeout(function () {
+      cardGrid.style.display = "none";
+      formSection.style.display = "block";
+      showForm(formType);
+      requestAnimationFrame(function () {
+        formSection.classList.add("visible");
+      });
+    }, 300);
 
-      cardGrid.classList.add("exiting");
-      setTimeout(function () {
-        cardGrid.style.display = "none";
-        formSection.style.display = "block";
-        showForm(formType);
-        requestAnimationFrame(function () {
-          formSection.classList.add("visible");
-        });
-      }, 300);
+    formSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-      formSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.querySelectorAll(".form-card-body").forEach(function (body) {
+    body.addEventListener("click", function () {
+      startForm(this.dataset.form);
+    });
+  });
+
+  document.querySelectorAll(".form-card-btn-primary").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      startForm(this.dataset.form);
     });
   });
 

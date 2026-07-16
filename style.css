@@ -1338,28 +1338,37 @@ ul {
 .form-card {
   display: flex;
   flex-direction: column;
-  padding: var(--space-xl);
   background: var(--bg-card);
   border: 2px solid var(--border-light);
   border-radius: var(--radius-lg);
-  text-decoration: none;
-  cursor: pointer;
-  text-align: left;
-  font-family: var(--font-sans);
-  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
-  -webkit-appearance: none;
-  appearance: none;
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .form-card:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-3px);
   border-color: var(--action-blue);
 }
 
-.form-card.active {
-  border-color: var(--action-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15), var(--shadow-card-hover);
+.form-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  width: 100%;
+  transition: background-color var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-card-body:hover {
+  background-color: var(--bg-card-hover);
 }
 
 .form-card-icon {
@@ -1391,31 +1400,53 @@ ul {
   font-size: 0.85rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: var(--space-lg);
   flex: 1;
+}
+
+.form-card-actions {
+  display: flex;
+  gap: var(--space-sm);
+  padding: 0 var(--space-xl) var(--space-xl);
 }
 
 .form-card-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.625rem 1.25rem;
-  font-size: 0.9rem;
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-on-action);
-  background-color: var(--action-blue);
   border-radius: var(--radius-full);
-  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
-  align-self: flex-start;
+  transition: all var(--transition-fast);
   font-family: var(--font-sans);
-  border: none;
   cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  white-space: nowrap;
 }
 
-.form-card:hover .form-card-btn,
-.form-card.active .form-card-btn {
+.form-card-btn-primary {
+  color: var(--text-on-action);
+  background-color: var(--action-blue);
+  border-color: var(--action-blue);
+}
+
+.form-card-btn-primary:hover {
   background-color: var(--action-blue-hover);
+  border-color: var(--action-blue-hover);
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+}
+
+.form-card-btn-secondary {
+  color: var(--action-blue);
+  background-color: transparent;
+  border-color: var(--action-blue);
+}
+
+.form-card-btn-secondary:hover {
+  background-color: var(--light-blue);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
 /* ---------- Order Form Section ---------- */
