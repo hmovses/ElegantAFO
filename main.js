@@ -223,18 +223,34 @@
       });
 
       if (!isValid) {
-        // Focus first error field
         var firstError = appointmentForm.querySelector(".error");
         if (firstError) firstError.focus();
         return;
       }
 
-      // Simulate successful submission
-      appointmentForm.style.display = "none";
-      if (formSuccess) {
-        formSuccess.hidden = false;
-        formSuccess.focus();
-      }
+      var fd = new FormData(appointmentForm);
+      var data = {};
+      fd.forEach(function (v, k) { data[k] = v; });
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", appointmentForm.action, true);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onload = function () {
+        if (xhr.status === 200 || xhr.status === 201 || xhr.status === 202) {
+          appointmentForm.style.display = "none";
+          if (formSuccess) {
+            formSuccess.hidden = false;
+            formSuccess.focus();
+          }
+        } else {
+          alert("There was a problem sending your message. Please try again or email us directly at elegantafo@gmail.com.");
+        }
+      };
+      xhr.onerror = function () {
+        alert("There was a problem sending your message. Please check your internet connection and try again.");
+      };
+      xhr.send(JSON.stringify(data));
     });
   }
 

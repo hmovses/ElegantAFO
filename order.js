@@ -160,6 +160,8 @@
     document.getElementById("formTypeInput").value = FORM_NAMES[formType];
 
     downloadBlankLink.href = FORM_BLANK_PDFS[formType];
+    downloadBlankLink.target = "_blank";
+    downloadBlankLink.rel = "noopener noreferrer";
     downloadBlankLink.style.display = "inline-flex";
 
     goToStep(1);
@@ -388,12 +390,15 @@
       }
 
       var formData = new FormData(orderForm);
+      var data = {};
+      formData.forEach(function (value, key) { data[key] = value; });
 
       var xhr = new XMLHttpRequest();
       xhr.open("POST", orderForm.action, true);
       xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
       xhr.onload = function () {
-        if (xhr.status === 200 || xhr.status === 201) {
+        if (xhr.status === 200 || xhr.status === 201 || xhr.status === 202) {
           orderForm.style.display = "none";
           orderSuccess.hidden = false;
           orderSuccess.focus();
@@ -404,15 +409,7 @@
       xhr.onerror = function () {
         alert("There was a problem submitting your order. Please check your internet connection and try again.");
       };
-      xhr.send(formData);
-    });
-  }
-
-  // ----- DOWNLOAD PDF -----
-
-  if (downloadPdfBtn) {
-    downloadPdfBtn.addEventListener("click", function () {
-      window.print();
+      xhr.send(JSON.stringify(data));
     });
   }
 
