@@ -465,48 +465,26 @@
       }
 
       var formData = new FormData(orderForm);
-      var fileInput = document.getElementById("pdfUpload");
-      var hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
+      var data = {};
+      formData.forEach(function (value, key) { data[key] = value; });
 
-      if (hasFile) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", orderForm.action, true);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.onload = function () {
-          if (xhr.status === 200 || xhr.status === 201 || xhr.status === 202) {
-            orderForm.style.display = "none";
-            orderSuccess.hidden = false;
-            orderSuccess.focus();
-          } else {
-            alert("There was a problem submitting your order. Please try again or email us directly at elegantafo@gmail.com.");
-          }
-        };
-        xhr.onerror = function () {
-          alert("There was a problem submitting your order. Please check your internet connection and try again.");
-        };
-        xhr.send(formData);
-      } else {
-        var data = {};
-        formData.forEach(function (value, key) { data[key] = value; });
-
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", orderForm.action, true);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.onload = function () {
-          if (xhr.status === 200 || xhr.status === 201 || xhr.status === 202) {
-            orderForm.style.display = "none";
-            orderSuccess.hidden = false;
-            orderSuccess.focus();
-          } else {
-            alert("There was a problem submitting your order. Please try again or email us directly at elegantafo@gmail.com.");
-          }
-        };
-        xhr.onerror = function () {
-          alert("There was a problem submitting your order. Please check your internet connection and try again.");
-        };
-        xhr.send(JSON.stringify(data));
-      }
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", orderForm.action, true);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onload = function () {
+        if (xhr.status === 200 || xhr.status === 201 || xhr.status === 202) {
+          orderForm.style.display = "none";
+          orderSuccess.hidden = false;
+          orderSuccess.focus();
+        } else {
+          alert("There was a problem submitting your order. Please try again or email us directly at elegantafo@gmail.com.");
+        }
+      };
+      xhr.onerror = function () {
+        alert("There was a problem submitting your order. Please check your internet connection and try again.");
+      };
+      xhr.send(JSON.stringify(data));
     });
   }
 
