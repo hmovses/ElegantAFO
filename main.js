@@ -154,16 +154,8 @@
       if (digits.length < 10) return "Phone number must be at least 10 digits.";
       return "";
     },
-    apptDate: function (value) {
-      if (!value) return "Please select an appointment date.";
-      const selected = new Date(value + "T00:00:00");
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-      if (selected < today) return "Appointment date cannot be in the past.";
-      return "";
-    },
-    condition: function (value) {
-      if (!value) return "Please select your primary condition.";
+    message: function (value) {
+      if (!value.trim()) return "Please enter your message.";
       return "";
     },
   };
