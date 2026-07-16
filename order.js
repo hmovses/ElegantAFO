@@ -32,86 +32,171 @@
   };
 
   var FORM_BLANK_PDFS = {
-    gauntlet: "Order forms/Gauntlet Order Form (Fillable).pdf",
-    thermoplastic: "Order forms/Thermoplastic AFO Order Form (Fillable).pdf",
-    bootline: "Order forms/Bootline Order Form (Fillable).pdf",
-    crow: "Order forms/Crow Boot Order Form (Fillable).pdf",
-    shoe: "Order forms/Shoe Modification Order Form (Fillable).pdf"
+    gauntlet: "Order forms/Gauntlet Order Form PDF NEW.pdf",
+    thermoplastic: "Order forms/Termoplastic AFO  Order Form .pdf",
+    bootline: "Order forms/Bootline Order Form NEW.pdf",
+    crow: "Order forms/Crow Boot Order Form NEW.pdf",
+    shoe: "Order forms/Shoe Modification Order Form NEW.pdf"
   };
 
-  var FORMS_WITH_CAST = ["gauntlet", "thermoplastic", "bootline", "crow"];
 
   var REVIEW_FIELDS = {
     common: [
-      { id: "physicianName", label: "Physician Name" },
-      { id: "facility", label: "Facility" },
-      { id: "physicianEmail", label: "Email" },
-      { id: "physicianPhone", label: "Phone" },
-      { id: "patientName", label: "Patient Name" },
-      { id: "patientDob", label: "Date of Birth" },
+      { id: "orderNo", label: "Order No." },
+      { id: "poNumber", label: "PO#" },
+      { id: "practitionerName", label: "Practitioner Name" },
+      { id: "facilityName", label: "Facility Name" },
+      { id: "practitionerPhone", label: "Phone" },
+      { id: "practitionerFax", label: "Fax" },
+      { id: "practitionerEmail", label: "Email" },
+      { id: "patientLastName", label: "Patient Last Name" },
+      { id: "patientFirstName", label: "Patient First Name" },
+      { checkboxGroup: "gender", label: "Gender" },
+      { checkboxGroup: "laterality", label: "Laterality" },
+      { id: "patientDx", label: "Diagnosis" },
+      { id: "patientAge", label: "Age" },
       { id: "patientHeight", label: "Height" },
       { id: "patientWeight", label: "Weight" },
-      { id: "shoeSize", label: "Shoe Size" },
-      { id: "gender", label: "Gender" },
-      { id: "laterality", label: "Laterality" },
-      { id: "icd10", label: "ICD-10 Code" },
-      { id: "diagnosis", label: "Diagnosis" }
+      { id: "patientShoeSize", label: "Shoe Size" },
+      { id: "patientDob", label: "Date of Birth" },
     ],
     gauntlet: [
-      { id: "gauntletHeight", label: "Overall Height" },
-      { id: "gauntletLeatherColor", label: "Leather Color" },
-      { id: "gauntletHeel", label: "Heel Style" },
-      { id: "gauntletClosure", label: "Closure Type" },
-      { id: "gauntletJoint", label: "Joint Selection" },
-      { id: "gauntletPlasticThickness", label: "Plastic Thickness" },
+      { id: "gauntletCastDate", label: "Casting Date" },
+      { checkboxGroup: "gauntletHeight", label: "Overall Height" },
+      { id: "gauntletHeightOther", label: "Other Height" },
+      { checkbox: "gauntletLeatherBlack", label: "Leather: Black" },
+      { checkbox: "gauntletLeatherBrown", label: "Leather: Brown" },
+      { checkbox: "gauntletLeatherTan", label: "Leather: Tan" },
+      { checkbox: "gauntletLeatherWhite", label: "Leather: White" },
+      { checkbox: "gauntletLeatherBeige", label: "Leather: Beige" },
+      { checkboxGroup: "gauntletPlastic", label: "Plastic Thickness" },
+      { checkbox: "gauntletHeelStd", label: "Heel: Standard" },
+      { checkbox: "gauntletHeelExt", label: "Heel: Extended" },
+      { checkbox: "gauntletHeelExtFl", label: "Heel: Extended Flange" },
+      { checkbox: "gauntletJointSingle", label: "Joint: Single" },
+      { checkbox: "gauntletJointDouble", label: "Joint: Double" },
+      { checkbox: "gauntletJointNone", label: "Joint: None" },
+      { id: "gauntletJointOther", label: "Other Joint" },
+      { checkbox: "gauntletClosureLace", label: "Closure: Lace" },
+      { checkbox: "gauntletClosureVelcro", label: "Closure: Velcro" },
+      { checkbox: "gauntletClosure3Boot", label: "Closure: 3 Boot Hooks" },
+      { checkbox: "gauntletClosure3Speed", label: "Closure: 3 Speed Lace" },
       { checkbox: "gauntletExtraPadding", label: "Extra Padding" },
       { checkbox: "gauntletRemovableInsert", label: "Removable Insert" },
-      { id: "gauntletFootplateTrim", label: "Foot Plate Trim" },
-      { id: "gauntletFootplateCover", label: "Foot Plate Cover" }
+      { checkbox: "gauntletFPTrim", label: "Foot Plate Trim" },
+      { id: "gauntletFPTrimDetail", label: "Trim Details" },
+      { checkbox: "gauntletFPCover", label: "Foot Plate Cover" },
+      { id: "gauntletFPCoverDetail", label: "Cover Details" },
+      { id: "gauntletCastAnkle", label: "Cast Ankle Angle" },
+      { id: "gauntletCastHindfoot", label: "Cast Hindfoot" },
+      { id: "gauntletCastForefoot", label: "Cast Forefoot" },
+      { id: "gauntletMeasHeightBrace", label: "Height of Brace" },
+      { id: "gauntletMeasAnkleHeight", label: "Ankle Height" },
+      { id: "gauntletMeasOther", label: "Other Measurements" },
+      { checkbox: "gauntletFabStandard", label: "Fab: Standard" },
+      { checkbox: "gauntletFabRush", label: "Fab: Rush" },
+      { checkbox: "gauntletFabEmerg", label: "Fab: Emergency" },
+      { id: "gauntletAdditional", label: "Additional Instructions" },
     ],
     thermoplastic: [
-      { id: "thermoProductType", label: "Product Type" },
-      { id: "thermoColor", label: "Color" },
-      { id: "thermoTrimLine", label: "Trim Line" },
-      { id: "thermoHinge", label: "Hinge" },
+      { checkbox: "thermoTradSolid", label: "Trad: Standard" },
+      { checkbox: "thermoTradArtic", label: "Trad: Articulated" },
+      { id: "thermoTradColor", label: "Trad Color" },
+      { checkbox: "thermoTrimPLS", label: "Trim: PLS" },
+      { checkbox: "thermoTrimSemi", label: "Trim: Semi-Solid" },
+      { checkbox: "thermoTrimSolid", label: "Trim: Solid" },
       { id: "thermoPlasticType", label: "Plastic Type" },
       { id: "thermoPlasticThickness", label: "Plastic Thickness" },
-      { checkbox: "thermoFoamLining", label: "Foam Lining" },
-      { id: "thermoHeelCup", label: "Heel Cup" },
-      { id: "thermoDurometer", label: "Durometer" },
+      { checkbox: "thermoHingeTamarack", label: "Hinge: Tamarack" },
+      { checkbox: "thermoHingeOklahoma", label: "Hinge: Oklahoma" },
+      { checkbox: "thermoHingeOther", label: "Hinge: Other" },
+      { id: "thermoHingeOtherDesc", label: "Hinge Desc" },
       { id: "thermoPlantarStop", label: "Plantar Stop" },
-      { id: "thermoFootplateTrim", label: "Foot Plate Trim" },
-      { id: "thermoFootplateCover", label: "Foot Plate Cover" }
+      { checkbox: "thermoFoamLining", label: "Foam Lining" },
+      { checkbox: "thermoHeelCupAdd", label: "Heel Cup" },
+      { id: "thermoHeelCupSize", label: "Heel Cup Size" },
+      { checkbox: "thermoActiveOverlap", label: "Active: Standard Overlap" },
+      { checkbox: "thermoActiveFree", label: "Active: Free Motion" },
+      { checkbox: "thermoActiveRestr", label: "Active: Restricted" },
+      { id: "thermoActiveColor", label: "Active Color" },
+      { id: "thermoActiveHinge", label: "Active Hinge" },
+      { checkbox: "thermoCastCorr", label: "Cast Correction" },
+      { checkbox: "thermoFPTrim", label: "Foot Plate Trim" },
+      { id: "thermoFPTrimDetail", label: "FP Trim Detail" },
+      { checkbox: "thermoFPCover", label: "Foot Plate Cover" },
+      { id: "thermoFPCoverDetail", label: "FP Cover Detail" },
+      { id: "thermoMeasCalf", label: "Calf Circumference" },
+      { id: "thermoMeasAnkleML", label: "Ankle M/L" },
+      { id: "thermoMeasAnkleAP", label: "Ankle A/P" },
+      { id: "thermoMeasFoot", label: "Foot Length" },
+      { checkbox: "thermoFabStandard", label: "Fab: Standard" },
+      { checkbox: "thermoFabRush", label: "Fab: Rush" },
+      { checkbox: "thermoFabEmerg", label: "Fab: Emergency" },
+      { id: "thermoAdditional", label: "Additional Info" },
     ],
     bootline: [
-      { id: "bootlineRocker", label: "Rocker Type" },
-      { id: "bootlineMidCalfHeight", label: "Mid-Calf Height" },
-      { id: "bootlineMidCalfCirc", label: "Mid-Calf Circumference" },
-      { id: "bootlineForefoot", label: "Forefoot Measurement" }
+      { checkboxGroup: "bootlineStyle", label: "Boot Style" },
+      { checkbox: "bootlineLeatherBlack", label: "Leather: Black" },
+      { checkbox: "bootlineLeatherBrown", label: "Leather: Brown" },
+      { checkbox: "bootlineLeatherTan", label: "Leather: Tan" },
+      { checkbox: "bootlineLeatherWhite", label: "Leather: White" },
+      { checkbox: "bootlineMoldedShoe", label: "Molded Shoe" },
+      { checkbox: "bootlineHighTop", label: "High Top" },
+      { checkbox: "bootlineChukka", label: "Chukka" },
+      { checkbox: "bootlineLowTop", label: "Low Top" },
+      { checkbox: "bootlineClosureLace", label: "Closure: Lace" },
+      { checkbox: "bootlineClosureVelcro", label: "Closure: Velcro" },
+      { checkbox: "bootlineClosureComb", label: "Closure: Combination" },
+      { id: "bootlineHeight", label: "Device Height" },
+      { id: "bootlineShoeSize", label: "Shoe Size" },
+      { id: "bootlineCastPrep", label: "Cast Prep Instructions" },
+      { checkbox: "bootlineFabStandard", label: "Fab: Standard" },
+      { checkbox: "bootlineFabRush", label: "Fab: Rush" },
+      { checkbox: "bootlineFabEmerg", label: "Fab: Emergency" },
+      { id: "bootlineAdditional", label: "Additional Info" },
     ],
     crow: [
-      { id: "crowRocker", label: "Rocker Type" },
-      { id: "crowPlasticColor", label: "Plastic Color" },
-      { id: "crowPlasticType", label: "Plastic Type" },
-      { id: "crowLiner", label: "Liner" }
+      { checkboxGroup: "crowRocker", label: "Rocker Options" },
+      { id: "crowRockerOtherDesc", label: "Rocker Desc" },
+      { checkbox: "crowMeasMidCalfML", label: "Meas: Mid-Calf M/L" },
+      { id: "crowMeasMidCalfMLVal", label: "Mid-Calf M/L Value" },
+      { checkbox: "crowMeasMidCalfAP", label: "Meas: Mid-Calf A/P" },
+      { id: "crowMeasMidCalfAPVal", label: "Mid-Calf A/P Value" },
+      { checkbox: "crowMeasAnkleHeight", label: "Meas: Ankle Height" },
+      { id: "crowMeasAnkleHeightVal", label: "Ankle Height Value" },
+      { checkbox: "crowMeasAnkleML", label: "Meas: Ankle M/L" },
+      { id: "crowMeasAnkleMLVal", label: "Ankle M/L Value" },
+      { checkbox: "crowMeasAnkleAP", label: "Meas: Ankle A/P" },
+      { id: "crowMeasAnkleAPVal", label: "Ankle A/P Value" },
+      { checkbox: "crowMeasFootLen", label: "Meas: Foot Length" },
+      { id: "crowMeasFootLenVal", label: "Foot Length Value" },
+      { id: "crowCastForefoot", label: "Cast Forefoot" },
+      { id: "crowCastAnkle", label: "Cast Ankle" },
+      { id: "crowCastHindfoot", label: "Cast Hindfoot" },
+      { checkbox: "crowPlasticPolypro", label: "Plastic: Polypro" },
+      { checkbox: "crowPlasticCopoly", label: "Plastic: Copolyester" },
+      { checkbox: "crowPlasticOther", label: "Plastic: Other" },
+      { id: "crowPlasticOtherDesc", label: "Plastic Desc" },
+      { checkbox: "crowLinerThin", label: "Liner: Thin" },
+      { checkbox: "crowLinerMed", label: "Liner: Medium" },
+      { checkbox: "crowLinerThick", label: "Liner: Thick" },
+      { checkbox: "crowFabStandard", label: "Fab: Standard" },
+      { checkbox: "crowFabRush", label: "Fab: Rush" },
+      { checkbox: "crowFabEmerg", label: "Fab: Emergency" },
+      { id: "crowAdditional", label: "Additional Info" },
     ],
     shoe: [
       { checkboxGroup: "shoeModType", label: "Modification Types" },
-      { id: "shoeModOtherDesc", label: "Other Description" }
-    ],
-    cast: [
-      { id: "castAnkle", label: "Ankle Angle" },
-      { id: "castHindfoot", label: "Hindfoot Position" },
-      { id: "castForefoot", label: "Forefoot Position" }
+      { id: "shoeModOtherDesc", label: "Other Description" },
     ],
     shipping: [
       { id: "shipToName", label: "Ship To Name" },
       { id: "billToName", label: "Bill To Name" },
       { id: "shipToAddress", label: "Ship To Address" },
-      { id: "poNumber", label: "PO Number" },
+      { id: "billToAddress", label: "Bill To Address" },
       { id: "priority", label: "Fabrication Priority" },
       { id: "shippingMethod", label: "Shipping Method" },
-      { id: "formNotes", label: "Notes" }
+      { id: "formNotes", label: "Notes" },
     ]
   };
 
@@ -152,9 +237,6 @@
 
     var section = document.getElementById("section-" + formType);
     if (section) section.hidden = false;
-
-    var castSection = document.getElementById("section-cast");
-    castSection.hidden = FORMS_WITH_CAST.indexOf(formType) === -1;
 
     document.getElementById("formSubject").value = "New " + FORM_NAMES[formType];
     document.getElementById("formTypeInput").value = FORM_NAMES[formType];
@@ -325,13 +407,6 @@
       var prodBlock = buildReviewBlock(prodFields);
       if (prodBlock) {
         html += "<div class=\"review-block\"><h4 class=\"review-block-title\">" + escHtml(FORM_NAMES[currentFormType]) + " — Specs</h4>" + prodBlock + "</div>";
-      }
-    }
-
-    if (FORMS_WITH_CAST.indexOf(currentFormType) !== -1) {
-      var castBlock = buildReviewBlock(REVIEW_FIELDS.cast);
-      if (castBlock) {
-        html += "<div class=\"review-block\"><h4 class=\"review-block-title\">Cast Correction</h4>" + castBlock + "</div>";
       }
     }
 

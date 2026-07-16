@@ -85,7 +85,7 @@
             </button>
             <div class="form-card-actions">
               <button type="button" class="form-card-btn form-card-btn-primary" data-form="gauntlet">Fill Online</button>
-              <a href="Order forms/Gauntlet Order Form (Fillable).pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
+              <a href="Order forms/Gauntlet Order Form PDF NEW.pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
             </div>
           </div>
 
@@ -99,7 +99,7 @@
             </button>
             <div class="form-card-actions">
               <button type="button" class="form-card-btn form-card-btn-primary" data-form="thermoplastic">Fill Online</button>
-              <a href="Order forms/Thermoplastic AFO Order Form (Fillable).pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
+              <a href="Order forms/Termoplastic AFO  Order Form .pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
             </div>
           </div>
 
@@ -113,7 +113,7 @@
             </button>
             <div class="form-card-actions">
               <button type="button" class="form-card-btn form-card-btn-primary" data-form="bootline">Fill Online</button>
-              <a href="Order forms/Bootline Order Form (Fillable).pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
+              <a href="Order forms/Bootline Order Form NEW.pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
             </button>
             <div class="form-card-actions">
               <button type="button" class="form-card-btn form-card-btn-primary" data-form="crow">Fill Online</button>
-              <a href="Order forms/Crow Boot Order Form (Fillable).pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
+              <a href="Order forms/Crow Boot Order Form NEW.pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
             </div>
           </div>
 
@@ -141,7 +141,7 @@
             </button>
             <div class="form-card-actions">
               <button type="button" class="form-card-btn form-card-btn-primary" data-form="shoe">Fill Online</button>
-              <a href="Order forms/Shoe Modification Order Form (Fillable).pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
+              <a href="Order forms/Shoe Modification Order Form NEW.pdf" class="form-card-btn form-card-btn-secondary" download target="_blank" rel="noopener noreferrer">Download Form</a>
             </div>
           </div>
 
@@ -190,25 +190,43 @@
             <div class="step-panel active" id="step1">
 
               <fieldset class="form-fieldset">
+                <legend class="fieldset-legend">Order Information</legend>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="orderNo">ORDER No.</label>
+                    <input type="text" id="orderNo" name="orderNo" placeholder="Order number">
+                  </div>
+                  <div class="form-group">
+                    <label for="poNumber">PO#</label>
+                    <input type="text" id="poNumber" name="poNumber" placeholder="Purchase order number">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset">
                 <legend class="fieldset-legend">Prescriber Information</legend>
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="physicianName">Physician Name <span class="required">*</span></label>
-                    <input type="text" id="physicianName" name="physicianName" required placeholder="Full name">
+                    <label for="practitionerName">Practitioner Name <span class="required">*</span></label>
+                    <input type="text" id="practitionerName" name="practitionerName" required placeholder="Full name">
                   </div>
                   <div class="form-group">
-                    <label for="facility">Facility Name</label>
-                    <input type="text" id="facility" name="facility" placeholder="Clinic or hospital">
+                    <label for="facilityName">Facility Name</label>
+                    <input type="text" id="facilityName" name="facilityName" placeholder="Clinic or hospital">
                   </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row form-row-3col">
                   <div class="form-group">
-                    <label for="physicianEmail">Email Address <span class="required">*</span></label>
-                    <input type="email" id="physicianEmail" name="physicianEmail" required placeholder="you@clinic.com">
+                    <label for="practitionerPhone">Phone</label>
+                    <input type="tel" id="practitionerPhone" name="practitionerPhone" placeholder="(818) 000-0000">
                   </div>
                   <div class="form-group">
-                    <label for="physicianPhone">Phone Number</label>
-                    <input type="tel" id="physicianPhone" name="physicianPhone" placeholder="(818) 000-0000">
+                    <label for="practitionerFax">Fax</label>
+                    <input type="tel" id="practitionerFax" name="practitionerFax" placeholder="(818) 000-0000">
+                  </div>
+                  <div class="form-group">
+                    <label for="practitionerEmail">Email <span class="required">*</span></label>
+                    <input type="email" id="practitionerEmail" name="practitionerEmail" required placeholder="you@clinic.com">
                   </div>
                 </div>
               </fieldset>
@@ -217,15 +235,40 @@
                 <legend class="fieldset-legend">Patient Information</legend>
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="patientName">Patient Name <span class="required">*</span></label>
-                    <input type="text" id="patientName" name="patientName" required placeholder="Full name">
+                    <label for="patientLastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="patientLastName" name="patientLastName" required placeholder="Last name">
                   </div>
                   <div class="form-group">
-                    <label for="patientDob">Date of Birth</label>
-                    <input type="date" id="patientDob" name="patientDob">
+                    <label for="patientFirstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="patientFirstName" name="patientFirstName" required placeholder="First name">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Gender</label>
+                    <div class="checkbox-row">
+                      <label class="checkbox-label-inline"><input type="checkbox" name="gender" value="Male"> <span>Male</span></label>
+                      <label class="checkbox-label-inline"><input type="checkbox" name="gender" value="Female"> <span>Female</span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Laterality</label>
+                    <div class="checkbox-row">
+                      <label class="checkbox-label-inline"><input type="checkbox" name="laterality" value="Right"> <span>Right</span></label>
+                      <label class="checkbox-label-inline"><input type="checkbox" name="laterality" value="Left"> <span>Left</span></label>
+                      <label class="checkbox-label-inline"><input type="checkbox" name="laterality" value="Bilateral"> <span>Bilateral</span></label>
+                    </div>
                   </div>
                 </div>
                 <div class="form-row form-row-4col">
+                  <div class="form-group">
+                    <label for="patientDx">DX / Diagnosis <span class="required">*</span></label>
+                    <input type="text" id="patientDx" name="patientDx" required placeholder="Primary diagnosis">
+                  </div>
+                  <div class="form-group">
+                    <label for="patientAge">Age</label>
+                    <input type="text" id="patientAge" name="patientAge" placeholder="Age">
+                  </div>
                   <div class="form-group">
                     <label for="patientHeight">Height</label>
                     <input type="text" id="patientHeight" name="patientHeight" placeholder="e.g. 5'10&quot;">
@@ -234,37 +277,16 @@
                     <label for="patientWeight">Weight</label>
                     <input type="text" id="patientWeight" name="patientWeight" placeholder="lbs">
                   </div>
-                  <div class="form-group">
-                    <label for="shoeSize">Shoe Size</label>
-                    <input type="text" id="shoeSize" name="shoeSize" placeholder="e.g. 9D">
-                  </div>
                 </div>
-                <div class="form-row form-row-3col">
+                <div class="form-row">
                   <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender" name="gender">
-                      <option value="">Select...</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                    </select>
+                    <label for="patientShoeSize">Shoe Size</label>
+                    <input type="text" id="patientShoeSize" name="patientShoeSize" placeholder="e.g. 9D">
                   </div>
                   <div class="form-group">
-                    <label for="laterality">Laterality</label>
-                    <select id="laterality" name="laterality">
-                      <option value="">Select...</option>
-                      <option value="Left">Left</option>
-                      <option value="Right">Right</option>
-                      <option value="Bilateral">Bilateral</option>
-                    </select>
+                    <label for="patientDob">Date of Birth</label>
+                    <input type="date" id="patientDob" name="patientDob">
                   </div>
-                  <div class="form-group">
-                    <label for="icd10">ICD-10 Code</label>
-                    <input type="text" id="icd10" name="icd10" placeholder="e.g. M21.37">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="diagnosis">Diagnosis <span class="required">*</span></label>
-                  <input type="text" id="diagnosis" name="diagnosis" required placeholder="Primary diagnosis">
                 </div>
               </fieldset>
 
@@ -276,83 +298,146 @@
               <!-- Gauntlet -->
               <div class="product-section" id="section-gauntlet" data-product="gauntlet" hidden>
                 <fieldset class="form-fieldset">
-                  <legend class="fieldset-legend">Gauntlet Specifications</legend>
+                  <legend class="fieldset-legend">Casting &amp; Height</legend>
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="gauntletHeight">Overall Height</label>
-                      <input type="text" id="gauntletHeight" name="gauntletHeight" placeholder="e.g. Standard, Tall">
+                      <label for="gauntletCastDate">Casting Date</label>
+                      <input type="date" id="gauntletCastDate" name="gauntletCastDate">
                     </div>
                     <div class="form-group">
-                      <label for="gauntletLeatherColor">Leather Color</label>
-                      <select id="gauntletLeatherColor" name="gauntletLeatherColor">
-                        <option value="">Select...</option>
-                        <option value="Black">Black</option>
-                        <option value="Brown">Brown</option>
-                        <option value="Tan">Tan</option>
-                        <option value="White">White</option>
-                        <option value="Beige">Beige</option>
-                      </select>
+                      <label>Overall Height</label>
+                      <div class="checkbox-row">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeight" value='6"'> <span>6"</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeight" value='9"'> <span>9"</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeight" value='12"'> <span>12"</span></label>
+                      </div>
+                      <input type="text" id="gauntletHeightOther" name="gauntletHeightOther" placeholder="Other height" style="margin-top:var(--space-xs)">
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Materials &amp; Options</legend>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Leather Color</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletLeatherBlack" value="yes"> <span>Black</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletLeatherBrown" value="yes"> <span>Brown</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletLeatherTan" value="yes"> <span>Tan</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletLeatherWhite" value="yes"> <span>White</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletLeatherBeige" value="yes"> <span>Beige</span></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Plastic Thickness</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="3/16"> <span>3/16</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="1/4"> <span>1/4</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="5/16"> <span>5/16</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="3/8"> <span>3/8</span></label>
+                      </div>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="gauntletHeel">Heel Style</label>
-                      <select id="gauntletHeel" name="gauntletHeel">
-                        <option value="">Select...</option>
-                        <option value="Standard">Standard</option>
-                        <option value="Extended">Extended</option>
-                        <option value="Extended Flange">Extended Flange</option>
-                      </select>
+                      <label>Heel Options</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeelStd" value="yes"> <span>Standard</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeelExt" value="yes"> <span>Extended</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeelExtFl" value="yes"> <span>Extended Flange</span></label>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label for="gauntletClosure">Closure Type</label>
-                      <select id="gauntletClosure" name="gauntletClosure">
-                        <option value="">Select...</option>
-                        <option value="Standard">Standard</option>
-                        <option value="Velcro">Velcro</option>
-                        <option value="Lace Up">Lace Up</option>
-                        <option value="Combination">Combination</option>
-                        <option value="Buckle">Buckle</option>
-                      </select>
+                      <label>Joint Selection</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletJointSingle" value="yes"> <span>Single</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletJointDouble" value="yes"> <span>Double</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletJointNone" value="yes"> <span>None</span></label>
+                      </div>
+                      <input type="text" id="gauntletJointOther" name="gauntletJointOther" placeholder="Other joint type" style="margin-top:var(--space-xs)">
                     </div>
                   </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Closure &amp; Additional Options</legend>
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="gauntletJoint">Joint Selection</label>
-                      <input type="text" id="gauntletJoint" name="gauntletJoint" placeholder="Joint type or N/A">
+                      <label>Closure Selection</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletClosureLace" value="yes"> <span>Lace</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletClosureVelcro" value="yes"> <span>Velcro</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletClosure3Boot" value="yes"> <span>3 Boot Hooks</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletClosure3Speed" value="yes"> <span>3 Speed Lace</span></label>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label for="gauntletPlasticThickness">Plastic Thickness</label>
-                      <select id="gauntletPlasticThickness" name="gauntletPlasticThickness">
-                        <option value="">Select...</option>
-                        <option value="3/16">3/16</option>
-                        <option value="1/4">1/4</option>
-                        <option value="5/16">5/16</option>
-                        <option value="3/8">3/8</option>
-                      </select>
+                      <label>Additional Options</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletExtraPadding" value="yes"> <span>Extra Padding</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletRemovableInsert" value="yes"> <span>Removable Insert</span></label>
+                      </div>
                     </div>
                   </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Foot Plate &amp; Cast Preparation</legend>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Foot Plate Options</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletFPTrim" value="yes"> <span>Foot Plate Trim</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletFPCover" value="yes"> <span>Foot Plate Cover</span></label>
+                      </div>
+                      <input type="text" id="gauntletFPTrimDetail" name="gauntletFPTrimDetail" placeholder="Trim type" style="margin-top:var(--space-xs)">
+                      <input type="text" id="gauntletFPCoverDetail" name="gauntletFPCoverDetail" placeholder="Cover type" style="margin-top:var(--space-xs)">
+                    </div>
+                    <div class="form-group">
+                      <label>Cast Preparation</label>
+                      <div style="display:flex;flex-direction:column;gap:var(--space-xs)">
+                        <input type="text" id="gauntletCastAnkle" name="gauntletCastAnkle" placeholder="Ankle angle">
+                        <input type="text" id="gauntletCastHindfoot" name="gauntletCastHindfoot" placeholder="Hindfoot position">
+                        <input type="text" id="gauntletCastForefoot" name="gauntletCastForefoot" placeholder="Forefoot position">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Fabrication &amp; Additional Info</legend>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Fabrication &amp; Shipping</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletFabStandard" value="yes"> <span>Standard</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletFabRush" value="yes"> <span>Rush</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletFabEmerg" value="yes"> <span>Emergency</span></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="gauntletAdditional">Additional Instructions</label>
+                      <textarea id="gauntletAdditional" name="gauntletAdditional" rows="3" placeholder="Special instructions"></textarea>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Measurements</legend>
                   <div class="form-row form-row-3col">
-                    <div class="form-group checkbox-group">
-                      <label class="checkbox-label">
-                        <input type="checkbox" name="gauntletExtraPadding" value="yes">
-                        <span>Extra Padding</span>
-                      </label>
-                    </div>
-                    <div class="form-group checkbox-group">
-                      <label class="checkbox-label">
-                        <input type="checkbox" name="gauntletRemovableInsert" value="yes">
-                        <span>Removable Insert</span>
-                      </label>
+                    <div class="form-group">
+                      <label for="gauntletMeasHeightBrace">Height of Brace</label>
+                      <input type="text" id="gauntletMeasHeightBrace" name="gauntletMeasHeightBrace" placeholder="Inches">
                     </div>
                     <div class="form-group">
-                      <label for="gauntletFootplateTrim">Foot Plate Trim</label>
-                      <input type="text" id="gauntletFootplateTrim" name="gauntletFootplateTrim" placeholder="Trim type">
+                      <label for="gauntletMeasAnkleHeight">Ankle Height</label>
+                      <input type="text" id="gauntletMeasAnkleHeight" name="gauntletMeasAnkleHeight" placeholder="Inches">
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="gauntletFootplateCover">Foot Plate Cover</label>
-                    <input type="text" id="gauntletFootplateCover" name="gauntletFootplateCover" placeholder="Cover type">
+                    <div class="form-group">
+                      <label for="gauntletMeasOther">Other Measurements</label>
+                      <input type="text" id="gauntletMeasOther" name="gauntletMeasOther" placeholder="Any other measurements">
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -360,38 +445,33 @@
               <!-- Thermoplastic AFO -->
               <div class="product-section" id="section-thermoplastic" data-product="thermoplastic" hidden>
                 <fieldset class="form-fieldset">
-                  <legend class="fieldset-legend">Thermoplastic AFO Specifications</legend>
-                  <div class="form-group">
-                    <label for="thermoProductType">Product Type</label>
-                    <select id="thermoProductType" name="thermoProductType">
-                      <option value="">Select...</option>
-                      <option value="Traditional Solid">Traditional Solid</option>
-                      <option value="Traditional Articulated">Traditional Articulated</option>
-                      <option value="Active Overlap">Active Overlap</option>
-                      <option value="Active Split Upright">Active Split Upright</option>
-                    </select>
+                  <legend class="fieldset-legend">Traditional AFO</legend>
+                  <div class="form-row form-row-3col">
+                    <div class="form-group">
+                      <label>Type</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoTradSolid" value="yes"> <span>Standard</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoTradArtic" value="yes"> <span>Articulated</span></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="thermoTradColor">Color</label>
+                      <input type="text" id="thermoTradColor" name="thermoTradColor" placeholder="Color">
+                    </div>
+                    <div class="form-group">
+                      <label>Trim Line</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoTrimPLS" value="yes"> <span>PLS</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoTrimSemi" value="yes"> <span>Semi-Solid</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoTrimSolid" value="yes"> <span>Solid</span></label>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-row">
-                    <div class="form-group">
-                      <label for="thermoColor">Color</label>
-                      <input type="text" id="thermoColor" name="thermoColor" placeholder="Color choice">
-                    </div>
-                    <div class="form-group">
-                      <label for="thermoTrimLine">Trim Line</label>
-                      <input type="text" id="thermoTrimLine" name="thermoTrimLine" placeholder="Trim line specification">
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label for="thermoHinge">Hinge</label>
-                      <input type="text" id="thermoHinge" name="thermoHinge" placeholder="Hinge type">
-                    </div>
                     <div class="form-group">
                       <label for="thermoPlasticType">Plastic Type</label>
                       <input type="text" id="thermoPlasticType" name="thermoPlasticType" placeholder="e.g. Polypro, Copolyester">
                     </div>
-                  </div>
-                  <div class="form-row">
                     <div class="form-group">
                       <label for="thermoPlasticThickness">Plastic Thickness</label>
                       <select id="thermoPlasticThickness" name="thermoPlasticThickness">
@@ -402,36 +482,98 @@
                         <option value="3/8">3/8</option>
                       </select>
                     </div>
-                    <div class="form-group checkbox-group">
-                      <label class="checkbox-label">
-                        <input type="checkbox" name="thermoFoamLining" value="yes">
-                        <span>Foam Lining</span>
-                      </label>
-                    </div>
                   </div>
-                  <div class="form-row">
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Hinge &amp; Plantar Options</legend>
+                  <div class="form-row form-row-3col">
                     <div class="form-group">
-                      <label for="thermoHeelCup">Heel Cup</label>
-                      <input type="text" id="thermoHeelCup" name="thermoHeelCup" placeholder="Heel cup type or N/A">
+                      <label>Hinge Type</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoHingeTamarack" value="yes"> <span>Tamarack</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoHingeOklahoma" value="yes"> <span>Oklahoma</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoHingeOther" value="yes"> <span>Other</span></label>
+                      </div>
+                      <input type="text" id="thermoHingeOtherDesc" name="thermoHingeOtherDesc" placeholder="Describe" style="margin-top:var(--space-xs)">
                     </div>
-                    <div class="form-group">
-                      <label for="thermoDurometer">Durometer</label>
-                      <input type="text" id="thermoDurometer" name="thermoDurometer" placeholder="e.g. 40, 50, 60">
-                    </div>
-                  </div>
-                  <div class="form-row">
                     <div class="form-group">
                       <label for="thermoPlantarStop">Plantar Stop</label>
-                      <input type="text" id="thermoPlantarStop" name="thermoPlantarStop" placeholder="Degree of plantar stop">
+                      <input type="text" id="thermoPlantarStop" name="thermoPlantarStop" placeholder="Degrees">
                     </div>
                     <div class="form-group">
-                      <label for="thermoFootplateTrim">Foot Plate Trim</label>
-                      <input type="text" id="thermoFootplateTrim" name="thermoFootplateTrim" placeholder="Trim type">
+                      <label>Additional</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoFoamLining" value="yes"> <span>Foam Lining</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoHeelCupAdd" value="yes"> <span>Heel Cup</span></label>
+                      </div>
+                      <input type="text" id="thermoHeelCupSize" name="thermoHeelCupSize" placeholder="Heel cup size" style="margin-top:var(--space-xs)">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="thermoFootplateCover">Foot Plate Cover</label>
-                    <input type="text" id="thermoFootplateCover" name="thermoFootplateCover" placeholder="Cover type">
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Active AFO</legend>
+                  <div class="form-row form-row-3col">
+                    <div class="form-group">
+                      <label>Style</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoActiveOverlap" value="yes"> <span>Standard Overlap</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoActiveFree" value="yes"> <span>Free Motion</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoActiveRestr" value="yes"> <span>Restricted</span></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="thermoActiveColor">Color</label>
+                      <input type="text" id="thermoActiveColor" name="thermoActiveColor" placeholder="Color">
+                    </div>
+                    <div class="form-group">
+                      <label for="thermoActiveHinge">Hinge Specs</label>
+                      <input type="text" id="thermoActiveHinge" name="thermoActiveHinge" placeholder="Hinge specifications">
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Foot Plate &amp; Measurements</legend>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Foot Plate</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoCastCorr" value="yes"> <span>Cast Correction</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoFPTrim" value="yes"> <span>Foot Plate Trim</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoFPCover" value="yes"> <span>Foot Plate Cover</span></label>
+                      </div>
+                      <input type="text" id="thermoFPTrimDetail" name="thermoFPTrimDetail" placeholder="Trim details" style="margin-top:var(--space-xs)">
+                      <input type="text" id="thermoFPCoverDetail" name="thermoFPCoverDetail" placeholder="Cover details" style="margin-top:var(--space-xs)">
+                    </div>
+                    <div class="form-group">
+                      <label>Measurements</label>
+                      <div style="display:flex;flex-direction:column;gap:var(--space-xs)">
+                        <input type="text" id="thermoMeasCalf" name="thermoMeasCalf" placeholder="Calf circumference">
+                        <input type="text" id="thermoMeasAnkleML" name="thermoMeasAnkleML" placeholder="Ankle M/L">
+                        <input type="text" id="thermoMeasAnkleAP" name="thermoMeasAnkleAP" placeholder="Ankle A/P">
+                        <input type="text" id="thermoMeasFoot" name="thermoMeasFoot" placeholder="Foot length">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Fabrication &amp; Additional Info</legend>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Fabrication &amp; Shipping</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoFabStandard" value="yes"> <span>Standard</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoFabRush" value="yes"> <span>Rush</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="thermoFabEmerg" value="yes"> <span>Emergency</span></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="thermoAdditional">Additional Information</label>
+                      <textarea id="thermoAdditional" name="thermoAdditional" rows="3" placeholder="Special instructions or notes"></textarea>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -439,25 +581,75 @@
               <!-- Bootline -->
               <div class="product-section" id="section-bootline" data-product="bootline" hidden>
                 <fieldset class="form-fieldset">
-                  <legend class="fieldset-legend">Bootline Specifications</legend>
+                  <legend class="fieldset-legend">Boot Style</legend>
+                  <div class="checkbox-grid">
+                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Tampa Boot"> <span>Tampa Boot</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Partial Boot"> <span>Partial Boot</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Hybrid Boot"> <span>Hybrid Boot</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Partial Foot"> <span>Partial Foot</span></label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Materials &amp; Options</legend>
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="bootlineRocker">Rocker Type</label>
-                      <input type="text" id="bootlineRocker" name="bootlineRocker" placeholder="Rocker style">
+                      <label>Leather Color</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineLeatherBlack" value="yes"> <span>Black</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineLeatherBrown" value="yes"> <span>Brown</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineLeatherTan" value="yes"> <span>Tan</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineLeatherWhite" value="yes"> <span>White</span></label>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label for="bootlineMidCalfHeight">Mid-Calf Height</label>
-                      <input type="text" id="bootlineMidCalfHeight" name="bootlineMidCalfHeight" placeholder="Inches">
+                      <label>Additional Options</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineMoldedShoe" value="yes"> <span>Molded Shoe</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineHighTop" value="yes"> <span>High Top</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineChukka" value="yes"> <span>Chukka</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineLowTop" value="yes"> <span>Low Top</span></label>
+                      </div>
                     </div>
                   </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Closure &amp; Measurements</legend>
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="bootlineMidCalfCirc">Mid-Calf Circumference</label>
-                      <input type="text" id="bootlineMidCalfCirc" name="bootlineMidCalfCirc" placeholder="Inches">
+                      <label>Closure Selection</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineClosureLace" value="yes"> <span>Lace</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineClosureVelcro" value="yes"> <span>Velcro</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineClosureComb" value="yes"> <span>Combination</span></label>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label for="bootlineForefoot">Forefoot Measurement</label>
-                      <input type="text" id="bootlineForefoot" name="bootlineForefoot" placeholder="Width or circumference">
+                      <label>Measurements</label>
+                      <div style="display:flex;flex-direction:column;gap:var(--space-xs)">
+                        <input type="text" id="bootlineHeight" name="bootlineHeight" placeholder="Height of device">
+                        <input type="text" id="bootlineShoeSize" name="bootlineShoeSize" placeholder="Patient's shoe size">
+                        <input type="text" id="bootlineCastPrep" name="bootlineCastPrep" placeholder="Cast preparation instructions">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Fabrication &amp; Additional Info</legend>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Fabrication &amp; Shipping</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineFabStandard" value="yes"> <span>Standard</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineFabRush" value="yes"> <span>Rush</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="bootlineFabEmerg" value="yes"> <span>Emergency</span></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="bootlineAdditional">Additional Information</label>
+                      <textarea id="bootlineAdditional" name="bootlineAdditional" rows="3" placeholder="Special instructions"></textarea>
                     </div>
                   </div>
                 </fieldset>
@@ -466,25 +658,83 @@
               <!-- Crow Boot -->
               <div class="product-section" id="section-crow" data-product="crow" hidden>
                 <fieldset class="form-fieldset">
-                  <legend class="fieldset-legend">Crow Boot Specifications</legend>
-                  <div class="form-row">
+                  <legend class="fieldset-legend">Rocker Options</legend>
+                  <div class="checkbox-grid">
+                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Sulcus"> <span>Sulcus</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Full"> <span>Full</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Mid Stance"> <span>Mid Stance</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Heel to Toe"> <span>Heel to Toe</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Double"> <span>Double</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Other"> <span>Other</span></label>
+                  </div>
+                  <div class="form-group" style="margin-top:var(--space-sm)">
+                    <input type="text" id="crowRockerOtherDesc" name="crowRockerOtherDesc" placeholder="Describe rocker type">
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Leg Measurements</legend>
+                  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-xs)">
+                    <div><label class="checkbox-label-inline"><input type="checkbox" name="crowMeasMidCalfML"> <span>Mid-Calf M/L</span></label> <input type="text" id="crowMeasMidCalfMLVal" placeholder="Value" style="width:80px"></div>
+                    <div><label class="checkbox-label-inline"><input type="checkbox" name="crowMeasMidCalfAP"> <span>Mid-Calf A/P</span></label> <input type="text" id="crowMeasMidCalfAPVal" placeholder="Value" style="width:80px"></div>
+                    <div><label class="checkbox-label-inline"><input type="checkbox" name="crowMeasAnkleHeight"> <span>Ankle Height</span></label> <input type="text" id="crowMeasAnkleHeightVal" placeholder="Value" style="width:80px"></div>
+                    <div><label class="checkbox-label-inline"><input type="checkbox" name="crowMeasAnkleML"> <span>Ankle M/L</span></label> <input type="text" id="crowMeasAnkleMLVal" placeholder="Value" style="width:80px"></div>
+                    <div><label class="checkbox-label-inline"><input type="checkbox" name="crowMeasAnkleAP"> <span>Ankle A/P</span></label> <input type="text" id="crowMeasAnkleAPVal" placeholder="Value" style="width:80px"></div>
+                    <div><label class="checkbox-label-inline"><input type="checkbox" name="crowMeasFootLen"> <span>Foot Length</span></label> <input type="text" id="crowMeasFootLenVal" placeholder="Value" style="width:80px"></div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Cast Correction</legend>
+                  <div class="form-row form-row-3col">
                     <div class="form-group">
-                      <label for="crowRocker">Rocker Type</label>
-                      <input type="text" id="crowRocker" name="crowRocker" placeholder="Rocker style">
+                      <label for="crowCastForefoot">Forefoot Alignment</label>
+                      <input type="text" id="crowCastForefoot" name="crowCastForefoot" placeholder="Varus/Valgus degrees">
                     </div>
                     <div class="form-group">
-                      <label for="crowPlasticColor">Plastic Color</label>
-                      <input type="text" id="crowPlasticColor" name="crowPlasticColor" placeholder="Color choice">
+                      <label for="crowCastAnkle">Ankle Alignment</label>
+                      <input type="text" id="crowCastAnkle" name="crowCastAnkle" placeholder="Degrees">
+                    </div>
+                    <div class="form-group">
+                      <label for="crowCastHindfoot">Hindfoot Subtalar Alignment</label>
+                      <input type="text" id="crowCastHindfoot" name="crowCastHindfoot" placeholder="Varus/Valgus degrees">
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-legend">Materials &amp; Additional Info</legend>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Plastic Type</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowPlasticPolypro" value="yes"> <span>Polypro</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowPlasticCopoly" value="yes"> <span>Copolyester</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowPlasticOther" value="yes"> <span>Other</span></label>
+                      </div>
+                      <input type="text" id="crowPlasticOtherDesc" name="crowPlasticOtherDesc" placeholder="Plastic type" style="margin-top:var(--space-xs)">
+                    </div>
+                    <div class="form-group">
+                      <label>Liner</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowLinerThin" value="yes"> <span>Thin</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowLinerMed" value="yes"> <span>Medium</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowLinerThick" value="yes"> <span>Thick</span></label>
+                      </div>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="crowPlasticType">Plastic Type</label>
-                      <input type="text" id="crowPlasticType" name="crowPlasticType" placeholder="e.g. Polypro, Copolyester">
+                      <label>Fabrication &amp; Shipping</label>
+                      <div class="checkbox-column">
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowFabStandard" value="yes"> <span>Standard</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowFabRush" value="yes"> <span>Rush</span></label>
+                        <label class="checkbox-label-inline"><input type="checkbox" name="crowFabEmerg" value="yes"> <span>Emergency</span></label>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label for="crowLiner">Liner</label>
-                      <input type="text" id="crowLiner" name="crowLiner" placeholder="Liner type">
+                      <label for="crowAdditional">Additional Information</label>
+                      <textarea id="crowAdditional" name="crowAdditional" rows="3" placeholder="Special instructions"></textarea>
                     </div>
                   </div>
                 </fieldset>
@@ -493,13 +743,19 @@
               <!-- Shoe Modification -->
               <div class="product-section" id="section-shoe" data-product="shoe" hidden>
                 <fieldset class="form-fieldset">
-                  <legend class="fieldset-legend">Shoe Modification Specifications</legend>
+                  <legend class="fieldset-legend">Modification Types</legend>
                   <p class="fieldset-hint">Select all modification types required:</p>
                   <div class="checkbox-grid">
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Sole Elevation"><span>Sole Elevation</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Negative Heel"><span>Negative Heel</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Sach Heel"><span>Sach Heel</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Rocker Sole"><span>Rocker Sole</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Heel Lift"><span>Heel Lift</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Buttress Flare"><span>Buttress Flare</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Heel To Toe Rockers"><span>Heel To Toe Rockers</span></label>
+                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Wedge"><span>Wedge</span></label>
                     <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Elevation"><span>Elevation</span></label>
                     <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Lift"><span>Lift</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Rocker"><span>Rocker</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Wedge"><span>Wedge</span></label>
                     <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Flare"><span>Flare</span></label>
                     <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Heel Cup"><span>Heel Cup</span></label>
                     <label class="checkbox-label"><input type="checkbox" name="shoeModType" value="Pad"><span>Pad</span></label>
@@ -515,26 +771,6 @@
               </div>
 
               <!-- Cast Correction -->
-              <div class="product-section" id="section-cast" data-product="cast" hidden>
-                <fieldset class="form-fieldset">
-                  <legend class="fieldset-legend">Cast Correction</legend>
-                  <div class="form-row form-row-3col">
-                    <div class="form-group">
-                      <label for="castAnkle">Ankle Angle</label>
-                      <input type="text" id="castAnkle" name="castAnkle" placeholder="Degrees">
-                    </div>
-                    <div class="form-group">
-                      <label for="castHindfoot">Hindfoot Position</label>
-                      <input type="text" id="castHindfoot" name="castHindfoot" placeholder="Varus/Valgus degrees">
-                    </div>
-                    <div class="form-group">
-                      <label for="castForefoot">Forefoot Position</label>
-                      <input type="text" id="castForefoot" name="castForefoot" placeholder="Varus/Valgus degrees">
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
             </div>
 
             <!-- ====== STEP 3: Review & Submit ====== -->
@@ -560,15 +796,17 @@
                     <input type="text" id="billToName" name="billToName" placeholder="If different from ship to">
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="shipToAddress">Ship To Address <span class="required">*</span></label>
-                  <input type="text" id="shipToAddress" name="shipToAddress" required placeholder="Street address, city, state, zip">
-                </div>
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="poNumber">PO Number</label>
-                    <input type="text" id="poNumber" name="poNumber" placeholder="Purchase order number">
+                    <label for="shipToAddress">Ship To Address <span class="required">*</span></label>
+                    <input type="text" id="shipToAddress" name="shipToAddress" required placeholder="Street address, city, state, zip">
                   </div>
+                  <div class="form-group">
+                    <label for="billToAddress">Bill To Address</label>
+                    <input type="text" id="billToAddress" name="billToAddress" placeholder="Street address, city, state, zip">
+                  </div>
+                </div>
+                <div class="form-row">
                   <div class="form-group">
                     <label for="priority">Fabrication Priority</label>
                     <select id="priority" name="priority">

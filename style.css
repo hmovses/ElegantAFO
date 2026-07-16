@@ -1533,6 +1533,31 @@ ul {
   gap: var(--space-sm);
 }
 
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  padding-top: var(--space-xs);
+}
+
+.checkbox-label-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.checkbox-label-inline input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--action-blue);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
 /* ---------- Form Actions ---------- */
 .form-actions {
   margin-top: var(--space-xl);
