@@ -1322,6 +1322,328 @@ ul {
   margin-top: var(--space-xs);
 }
 
+/* ---------- Form Select Section ---------- */
+.form-select-section {
+  background-color: var(--bg-body);
+  padding-bottom: var(--space-xl);
+}
+
+.form-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl);
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+  border-color: var(--action-blue);
+}
+
+.form-card.active {
+  border-color: var(--action-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15), var(--shadow-card-hover);
+}
+
+.form-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: var(--light-blue);
+  color: var(--brand-blue);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .form-card-icon {
+  background-color: rgba(37, 99, 235, 0.15);
+  color: #60A5FA;
+}
+
+.form-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.form-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  flex: 1;
+}
+
+.form-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-on-action);
+  background-color: var(--action-blue);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  align-self: flex-start;
+  font-family: var(--font-sans);
+  border: none;
+  cursor: pointer;
+}
+
+.form-card:hover .form-card-btn,
+.form-card.active .form-card-btn {
+  background-color: var(--action-blue-hover);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* ---------- Order Form Section ---------- */
+.order-form-section {
+  background-color: var(--bg-section-alt);
+  padding-top: 0;
+}
+
+.order-form-card {
+  max-width: 860px;
+  margin-inline: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.order-form-header {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* ---------- Fieldsets ---------- */
+.form-fieldset {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.fieldset-legend {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding: 0 var(--space-sm);
+  margin-bottom: 0;
+}
+
+.fieldset-hint {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* ---------- Layout variants ---------- */
+.form-row-3col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-row-4col {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* ---------- Checkbox Groups ---------- */
+.checkbox-group {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--space-xs);
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--action-blue);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-sm);
+}
+
+/* ---------- Form Actions ---------- */
+.form-actions {
+  margin-top: var(--space-xl);
+}
+
+.form-actions-secondary {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.form-actions-secondary .btn {
+  flex: 0 1 auto;
+  min-width: 180px;
+}
+
+/* ---------- Print-specific form styles ---------- */
+@media print {
+  .site-header,
+  .site-footer,
+  .order-hero,
+  .form-select-section,
+  .form-actions,
+  .form-actions-secondary,
+  .btn,
+  #downloadPdfBtn,
+  #downloadBlankLink {
+    display: none !important;
+  }
+
+  .order-form-section {
+    padding: 0;
+    background: #fff;
+  }
+
+  .order-form-card {
+    max-width: 100%;
+    box-shadow: none;
+    border: none;
+    padding: 0.5in;
+    background: #fff;
+  }
+
+  .order-form-header {
+    border-bottom: 2px solid #000;
+    margin-bottom: 0.5in;
+    padding-bottom: 0.25in;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .section-lead {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .form-fieldset {
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 0.25in;
+    margin-bottom: 0.25in;
+    break-inside: avoid;
+  }
+
+  .fieldset-legend {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    padding: 0 8px;
+  }
+
+  .form-group {
+    margin-bottom: 0.15in;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    color: #333;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 1px solid #666;
+    background: #fff;
+    color: #000;
+    font-size: 10pt;
+    padding: 4px 8px;
+  }
+
+  .checkbox-label {
+    font-size: 10pt;
+    color: #000;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .form-error {
+    display: none;
+  }
+
+  .form-section[hidden] {
+    display: none !important;
+  }
+
+  .order-form-card {
+    display: block !important;
+  }
+
+  #orderFormWrapper {
+    display: block !important;
+  }
+
+  .form-success {
+    display: none !important;
+  }
+
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  input, select, textarea {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 /* ============================================================
    RESPONSIVE DESIGN
    ============================================================ */
@@ -1486,26 +1808,6 @@ ul {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-/* Print */
-@media print {
-  .site-header,
-  .theme-toggle,
-  .mobile-menu-btn,
-  .hero-actions {
-    display: none;
-  }
-
-  body {
-    color: #000;
-    background: #fff;
-  }
-
-  .section {
-    padding-block: 1rem;
-    break-inside: avoid;
   }
 }
 
