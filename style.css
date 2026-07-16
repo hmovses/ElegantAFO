@@ -1519,126 +1519,340 @@ ul {
   min-width: 180px;
 }
 
+/* ---------- Form Header ---------- */
+.form-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--action-blue);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.btn-link:hover {
+  color: var(--action-blue-hover);
+}
+
+/* ---------- Stepper Progress Bar ---------- */
+#stepper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-lg) 0;
+}
+
+#stepper .step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 0 0 auto;
+  min-width: 90px;
+}
+
+#stepper .step-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-medium);
+  color: var(--text-muted);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+#stepper .step-indicator.active .step-circle {
+  background: var(--action-blue);
+  border-color: var(--action-blue);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+#stepper .step-indicator.completed .step-circle {
+  background: var(--success-green);
+  border-color: var(--success-green);
+  color: #fff;
+}
+
+#stepper .step-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: color var(--transition-base);
+  max-width: 110px;
+}
+
+#stepper .step-indicator.active .step-label {
+  color: var(--action-blue);
+  font-weight: 600;
+}
+
+#stepper .step-indicator.completed .step-label {
+  color: var(--success-green);
+}
+
+#stepper .step-connector {
+  flex: 1;
+  height: 2.5px;
+  background: var(--border-medium);
+  margin-top: 19px;
+  margin-inline: var(--space-sm);
+  min-width: 24px;
+  transition: background var(--transition-base);
+  border-radius: 2px;
+}
+
+#stepper .step-indicator.completed + .step-connector {
+  background: var(--success-green);
+}
+
+/* ---------- Step Panels ---------- */
+.step-panel {
+  display: none;
+}
+
+.step-panel.active {
+  display: block;
+  animation: stepFadeIn 0.3s ease forwards;
+}
+
+@keyframes stepFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Step Navigation ---------- */
+.step-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-light);
+}
+
+.step-nav .btn {
+  min-width: 120px;
+}
+
+.step-nav .btn svg {
+  flex-shrink: 0;
+}
+
+/* ---------- Card Grid Exit Animation ---------- */
+.form-cards-grid {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form-cards-grid.exiting {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* ---------- Form Section Enter Animation ---------- */
+#orderFormSection {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#orderFormSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Review Summary ---------- */
+.review-section {
+  margin-bottom: var(--space-xl);
+}
+
+.review-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.review-block {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--bg-section-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.review-block-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+[data-theme="dark"] .review-block-title {
+  color: #60A5FA;
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.review-item dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.review-item dd {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
 /* ---------- Print-specific form styles ---------- */
 @media print {
   .site-header,
   .site-footer,
   .order-hero,
   .form-select-section,
-  .form-actions,
-  .form-actions-secondary,
-  .btn,
-  #downloadPdfBtn,
-  #downloadBlankLink {
+  #stepper,
+  .step-nav,
+  .btn-link,
+  .form-error,
+  .form-success,
+  .product-section {
     display: none !important;
   }
 
-  .order-form-section {
+  #orderFormSection {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
     padding: 0;
     background: #fff;
   }
 
+  #orderFormWrapper,
   .order-form-card {
+    display: block !important;
     max-width: 100%;
     box-shadow: none;
     border: none;
-    padding: 0.5in;
+    padding: 0;
     background: #fff;
   }
 
   .order-form-header {
     border-bottom: 2px solid #000;
-    margin-bottom: 0.5in;
-    padding-bottom: 0.25in;
+    margin-bottom: 0.3in;
+    padding-bottom: 0.15in;
   }
 
-  .section-title {
-    font-size: 1.5rem;
+  #selectedFormTitle {
+    font-size: 1.3rem;
     color: #000;
   }
 
-  .section-lead {
-    font-size: 1rem;
-    color: #333;
+  .step-panel {
+    display: none !important;
   }
 
-  .form-fieldset {
-    border: 1px solid #999;
+  .step-panel#step3 {
+    display: block !important;
+  }
+
+  .step-panel#step3 .form-fieldset {
+    display: none !important;
+  }
+
+  .review-section {
+    display: block !important;
+  }
+
+  .review-block {
+    background: #f8f8f8 !important;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    padding: 0.25in;
-    margin-bottom: 0.25in;
+    padding: 0.2in;
+    margin-bottom: 0.2in;
     break-inside: avoid;
   }
 
-  .fieldset-legend {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #000;
-    padding: 0 8px;
+  .review-block-title {
+    color: #1E40AF !important;
+    font-size: 0.8rem;
   }
 
-  .form-group {
-    margin-bottom: 0.15in;
+  .review-list {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .form-group label {
-    font-size: 0.85rem;
-    color: #333;
+  .review-item dt {
+    font-size: 0.7rem;
+    color: #555;
   }
 
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    border: 1px solid #666;
-    background: #fff;
-    color: #000;
-    font-size: 10pt;
-    padding: 4px 8px;
-  }
-
-  .checkbox-label {
-    font-size: 10pt;
+  .review-item dd {
+    font-size: 0.9rem;
     color: #000;
   }
 
-  .checkbox-label input[type="checkbox"] {
-    width: 14px;
-    height: 14px;
-  }
-
-  .checkbox-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  }
-
-  .form-error {
-    display: none;
-  }
-
-  .form-section[hidden] {
+  .form-actions,
+  .btn {
     display: none !important;
   }
 
-  .order-form-card {
-    display: block !important;
-  }
-
-  #orderFormWrapper {
-    display: block !important;
-  }
-
-  .form-success {
-    display: none !important;
+  .text-muted {
+    color: #666;
   }
 
   body {
     font-size: 11pt;
     color: #000;
     background: #fff;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  input, select, textarea {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -1757,6 +1971,20 @@ ul {
     align-items: center;
   }
 
+  #stepper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  #stepper .step-connector {
+    width: 2.5px;
+    height: 24px;
+    margin-top: 0;
+    margin-inline: 0;
+    min-width: 0;
+  }
+
   .step {
     max-width: 100%;
   }
@@ -1773,6 +2001,15 @@ ul {
   }
 
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #stepper .step-label {
+    max-width: none;
+    font-size: 0.75rem;
+  }
+
+  .review-list {
     grid-template-columns: 1fr;
   }
 
