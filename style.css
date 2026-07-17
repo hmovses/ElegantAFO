@@ -656,6 +656,18 @@ ul {
   gap: var(--space-xl);
 }
 
+.subsection-grid--centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xl);
+}
+
+.subsection-grid--centered .product-card {
+  flex: 0 1 380px;
+  min-width: 280px;
+}
+
 .product-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
@@ -2058,6 +2070,17 @@ ul {
 
   .subsection-grid {
     grid-template-columns: 1fr;
+  }
+
+  .subsection-grid--centered {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subsection-grid--centered .product-card {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 480px;
   }
 
   .stepper {
