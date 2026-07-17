@@ -669,8 +669,14 @@ ul {
 }
 
 .subsection-grid--browse {
-  grid-template-columns: repeat(auto-fill, minmax(320px, 400px));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: var(--space-xl);
+}
+
+.subsection-grid--browse .product-card {
+  flex: 0 1 360px;
 }
 
 .product-card {
@@ -2082,7 +2088,8 @@ ul {
     align-items: center;
   }
 
-  .subsection-grid--centered .product-card {
+  .subsection-grid--centered .product-card,
+  .subsection-grid--browse .product-card {
     flex: 0 1 auto;
     width: 100%;
     max-width: 480px;
