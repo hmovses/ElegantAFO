@@ -668,6 +668,11 @@ ul {
   min-width: 280px;
 }
 
+.subsection-grid--browse {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 400px));
+  justify-content: center;
+}
+
 .product-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
