@@ -624,7 +624,7 @@ ul {
 
 .product-subsection {
   margin-bottom: var(--space-3xl);
-  text-align: left;
+  text-align: center;
 }
 
 .product-subsection:last-child {
