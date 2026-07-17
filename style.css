@@ -714,6 +714,14 @@ ul {
   transform: scale(1.03);
 }
 
+.product-img--flip {
+  transform: scaleX(-1);
+}
+
+.product-card:hover .product-img--flip {
+  transform: scaleX(-1) scale(1.03);
+}
+
 [data-theme="dark"] .product-image-area {
   background-color: var(--bg-section-alt);
 }
