@@ -247,16 +247,16 @@
                   <div class="form-group">
                     <label>Gender</label>
                     <div class="checkbox-row">
-                      <label class="checkbox-label-inline"><input type="checkbox" name="gender" value="Male"> <span>Male</span></label>
-                      <label class="checkbox-label-inline"><input type="checkbox" name="gender" value="Female"> <span>Female</span></label>
+                      <label class="checkbox-label-inline"><input type="radio" name="gender" value="Male" required> <span>Male</span></label>
+                      <label class="checkbox-label-inline"><input type="radio" name="gender" value="Female"> <span>Female</span></label>
                     </div>
                   </div>
                   <div class="form-group">
                     <label>Laterality</label>
                     <div class="checkbox-row">
-                      <label class="checkbox-label-inline"><input type="checkbox" name="laterality" value="Right"> <span>Right</span></label>
-                      <label class="checkbox-label-inline"><input type="checkbox" name="laterality" value="Left"> <span>Left</span></label>
-                      <label class="checkbox-label-inline"><input type="checkbox" name="laterality" value="Bilateral"> <span>Bilateral</span></label>
+                      <label class="checkbox-label-inline"><input type="radio" name="laterality" value="Right" required> <span>Right</span></label>
+                      <label class="checkbox-label-inline"><input type="radio" name="laterality" value="Left"> <span>Left</span></label>
+                      <label class="checkbox-label-inline"><input type="radio" name="laterality" value="Bilateral"> <span>Bilateral</span></label>
                     </div>
                   </div>
                 </div>
@@ -307,9 +307,9 @@
                     <div class="form-group">
                       <label>Overall Height</label>
                       <div class="checkbox-row">
-                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeight" value='6"'> <span>6"</span></label>
-                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeight" value='9"'> <span>9"</span></label>
-                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletHeight" value='12"'> <span>12"</span></label>
+                        <label class="checkbox-label-inline"><input type="radio" name="gauntletHeight" value='6"'> <span>6"</span></label>
+                        <label class="checkbox-label-inline"><input type="radio" name="gauntletHeight" value='9"'> <span>9"</span></label>
+                        <label class="checkbox-label-inline"><input type="radio" name="gauntletHeight" value='12"'> <span>12"</span></label>
                       </div>
                       <input type="text" id="gauntletHeightOther" name="gauntletHeightOther" placeholder="Other height" style="margin-top:var(--space-xs)">
                     </div>
@@ -332,10 +332,10 @@
                     <div class="form-group">
                       <label>Plastic Thickness</label>
                       <div class="checkbox-column">
-                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="3/16"> <span>3/16</span></label>
-                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="1/4"> <span>1/4</span></label>
-                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="5/16"> <span>5/16</span></label>
-                        <label class="checkbox-label-inline"><input type="checkbox" name="gauntletPlastic" value="3/8"> <span>3/8</span></label>
+                        <label class="checkbox-label-inline"><input type="radio" name="gauntletPlastic" value="3/16"> <span>3/16</span></label>
+                        <label class="checkbox-label-inline"><input type="radio" name="gauntletPlastic" value="1/4"> <span>1/4</span></label>
+                        <label class="checkbox-label-inline"><input type="radio" name="gauntletPlastic" value="5/16"> <span>5/16</span></label>
+                        <label class="checkbox-label-inline"><input type="radio" name="gauntletPlastic" value="3/8"> <span>3/8</span></label>
                       </div>
                     </div>
                   </div>
@@ -583,10 +583,10 @@
                 <fieldset class="form-fieldset">
                   <legend class="fieldset-legend">Boot Style</legend>
                   <div class="checkbox-grid">
-                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Tampa Boot"> <span>Tampa Boot</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Partial Boot"> <span>Partial Boot</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Hybrid Boot"> <span>Hybrid Boot</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="bootlineStyle" value="Partial Foot"> <span>Partial Foot</span></label>
+                    <label class="checkbox-label"><input type="radio" name="bootlineStyle" value="Tampa Boot" required> <span>Tampa Boot</span></label>
+                    <label class="checkbox-label"><input type="radio" name="bootlineStyle" value="Partial Boot"> <span>Partial Boot</span></label>
+                    <label class="checkbox-label"><input type="radio" name="bootlineStyle" value="Hybrid Boot"> <span>Hybrid Boot</span></label>
+                    <label class="checkbox-label"><input type="radio" name="bootlineStyle" value="Partial Foot"> <span>Partial Foot</span></label>
                   </div>
                 </fieldset>
 
@@ -660,12 +660,12 @@
                 <fieldset class="form-fieldset">
                   <legend class="fieldset-legend">Rocker Options</legend>
                   <div class="checkbox-grid">
-                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Sulcus"> <span>Sulcus</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Full"> <span>Full</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Mid Stance"> <span>Mid Stance</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Heel to Toe"> <span>Heel to Toe</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Double"> <span>Double</span></label>
-                    <label class="checkbox-label"><input type="checkbox" name="crowRocker" value="Other"> <span>Other</span></label>
+                    <label class="checkbox-label"><input type="radio" name="crowRocker" value="Sulcus"> <span>Sulcus</span></label>
+                    <label class="checkbox-label"><input type="radio" name="crowRocker" value="Full"> <span>Full</span></label>
+                    <label class="checkbox-label"><input type="radio" name="crowRocker" value="Mid Stance"> <span>Mid Stance</span></label>
+                    <label class="checkbox-label"><input type="radio" name="crowRocker" value="Heel to Toe"> <span>Heel to Toe</span></label>
+                    <label class="checkbox-label"><input type="radio" name="crowRocker" value="Double"> <span>Double</span></label>
+                    <label class="checkbox-label"><input type="radio" name="crowRocker" value="Other"> <span>Other</span></label>
                   </div>
                   <div class="form-group" style="margin-top:var(--space-sm)">
                     <input type="text" id="crowRockerOtherDesc" name="crowRockerOtherDesc" placeholder="Describe rocker type">

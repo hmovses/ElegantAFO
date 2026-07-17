@@ -19,7 +19,6 @@
   ];
   var nextBtn = document.getElementById("nextBtn");
   var prevBtn = document.getElementById("prevBtn");
-  var downloadPdfBtn = document.getElementById("downloadPdfBtn");
   var downloadBlankLink = document.getElementById("downloadBlankLink");
   var productSections = document.querySelectorAll(".product-section");
 
@@ -466,7 +465,13 @@
 
       var formData = new FormData(orderForm);
       var data = {};
-      formData.forEach(function (value, key) { data[key] = value; });
+      formData.forEach(function (value, key) {
+        if (data.hasOwnProperty(key)) {
+          data[key] = data[key] + ", " + value;
+        } else {
+          data[key] = value;
+        }
+      });
 
       var xhr = new XMLHttpRequest();
       xhr.open("POST", orderForm.action, true);
@@ -476,7 +481,7 @@
         if (xhr.status === 200 || xhr.status === 201 || xhr.status === 202) {
           orderForm.style.display = "none";
           orderSuccess.hidden = false;
-          orderSuccess.focus();
+          if (orderSuccess) orderSuccess.focus();
         } else {
           alert("There was a problem submitting your order. Please try again or email us directly at elegantafo@gmail.com.");
         }
