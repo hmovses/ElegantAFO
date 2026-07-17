@@ -730,12 +730,7 @@ ul {
 }
 
 .product-tagline {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--brand-blue);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-md);
+  display: none;
 }
 
 [data-theme="dark"] .product-tagline {
