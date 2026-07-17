@@ -26,7 +26,15 @@
 
         <ul class="nav-links" id="primary-nav" role="menubar">
           <li role="none"><a href="#about" role="menuitem" class="nav-link">About</a></li>
-          <li role="none"><a href="#products" role="menuitem" class="nav-link">Products</a></li>
+          <li role="none" class="nav-dropdown">
+            <button type="button" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Products</button>
+            <ul class="nav-dropdown-menu" role="menu">
+              <li role="none"><a href="#sub-gauntlet" role="menuitem" class="nav-dropdown-link">Gauntlet Line</a></li>
+              <li role="none"><a href="#sub-boot" role="menuitem" class="nav-dropdown-link">Boot Line</a></li>
+              <li role="none"><a href="#sub-thermo" role="menuitem" class="nav-dropdown-link">Thermoplastic</a></li>
+              <li role="none"><a href="#sub-shoe" role="menuitem" class="nav-dropdown-link">Shoe Modification</a></li>
+            </ul>
+          </li>
           <li role="none"><a href="#process" role="menuitem" class="nav-link">Process</a></li>
           <li role="none"><a href="#contact" role="menuitem" class="nav-link">Contact</a></li>
           <li role="none"><a href="order.html" role="menuitem" class="nav-link">Order Form</a></li>
@@ -69,7 +77,7 @@
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Contact Us</a>
-          <a href="#products" class="btn btn-secondary">Explore Our Products</a>
+          <a href="#sub-gauntlet" class="btn btn-secondary">Explore Our Products</a>
         </div>
       </div>
 
@@ -118,7 +126,7 @@
         <p class="section-lead">Each orthotic is precision-fabricated to match your unique anatomy, lifestyle, and clinical requirements.</p>
 
         <!-- ====== Gauntlet Line ====== -->
-        <div class="product-subsection">
+        <div class="product-subsection" id="sub-gauntlet">
           <h3 class="subsection-title">Gauntlet Line</h3>
           <p class="subsection-desc">Leather-lined gauntlet-style AFOs offering durable support and comfort for a wide range of lower-limb conditions, from PTTD to post-surgical recovery.</p>
           <div class="subsection-grid">
@@ -347,7 +355,7 @@
         </div>
 
         <!-- ====== Boot Line ====== -->
-        <div class="product-subsection">
+        <div class="product-subsection" id="sub-boot">
           <h3 class="subsection-title">Boot Line</h3>
           <p class="subsection-desc">Comprehensive boot walkers and post-amputation solutions for complex foot and ankle pathologies requiring full enclosure and maximum protection.</p>
           <div class="subsection-grid subsection-grid--browse">
@@ -536,7 +544,7 @@
         </div>
 
         <!-- ====== Thermoplastic Traditional ====== -->
-        <div class="product-subsection">
+        <div class="product-subsection" id="sub-thermo">
           <h3 class="subsection-title">Thermoplastic Traditional</h3>
           <p class="subsection-desc">Rigid and articulated thermoplastic AFOs providing maximum stabilization or guided motion for patients requiring traditional orthotic management.</p>
           <div class="subsection-grid subsection-grid--centered">
@@ -690,7 +698,7 @@
         </div>
 
         <!-- ====== Shoe Modification ====== -->
-        <div class="product-subsection">
+        <div class="product-subsection" id="sub-shoe">
           <h3 class="subsection-title">Shoe Modification</h3>
           <p class="subsection-desc">Custom shoe modifications including elevations, lifts, rockers, wedges, and flares to accommodate a wide range of gait and structural needs.</p>
           <div class="subsection-grid subsection-grid--centered">
@@ -836,7 +844,7 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#products">Products</a></li>
+          <li><a href="#sub-gauntlet">Products</a></li>
           <li><a href="#process">Our Process</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -844,10 +852,10 @@
       <div class="footer-links">
         <h4>Conditions Treated</h4>
         <ul>
-          <li><a href="#products">Drop Foot</a></li>
-          <li><a href="#products">Stroke Recovery</a></li>
-          <li><a href="#products">Cerebral Palsy</a></li>
-          <li><a href="#products">Spinal Cord Injury</a></li>
+          <li><a href="#sub-gauntlet">Drop Foot</a></li>
+          <li><a href="#sub-gauntlet">Stroke Recovery</a></li>
+          <li><a href="#sub-gauntlet">Cerebral Palsy</a></li>
+          <li><a href="#sub-gauntlet">Spinal Cord Injury</a></li>
         </ul>
       </div>
       <div class="footer-disclaimer">

@@ -96,6 +96,47 @@
     link.addEventListener("click", closeMobileMenu);
   });
 
+  /* ----------------------------------------------------------
+     3.5 NAV DROPDOWN
+     ---------------------------------------------------------- */
+  var dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+  var dropdownMenu = document.querySelector(".nav-dropdown-menu");
+
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var expanded = dropdownToggle.getAttribute("aria-expanded") === "true";
+      dropdownToggle.setAttribute("aria-expanded", String(!expanded));
+      dropdownMenu.setAttribute("aria-hidden", expanded ? "true" : "false");
+    });
+
+    // Close on Escape
+    dropdownToggle.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        dropdownToggle.setAttribute("aria-expanded", "false");
+        dropdownMenu.setAttribute("aria-hidden", "true");
+        dropdownToggle.focus();
+      }
+    });
+
+    // Close when a dropdown link is clicked
+    dropdownMenu.querySelectorAll(".nav-dropdown-link").forEach(function (link) {
+      link.addEventListener("click", function () {
+        dropdownToggle.setAttribute("aria-expanded", "false");
+        dropdownMenu.setAttribute("aria-hidden", "true");
+        closeMobileMenu();
+      });
+    });
+
+    // Close on click outside
+    document.addEventListener("click", function (e) {
+      if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownToggle.setAttribute("aria-expanded", "false");
+        dropdownMenu.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
   // Close on Escape
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && navLinks.classList.contains("is-open")) {
@@ -266,7 +307,6 @@
   /* ----------------------------------------------------------
      8. HEADER SCROLL EFFECT
      ---------------------------------------------------------- */
-  var header = document.querySelector(".site-header");
   var lastScroll = 0;
 
   function onScroll() {
