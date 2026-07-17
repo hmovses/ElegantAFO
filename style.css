@@ -1228,24 +1228,6 @@ ul {
   transform: translateY(-3px);
 }
 
-.form-card-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  background-color: var(--light-blue);
-  color: var(--brand-blue);
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-md);
-  flex-shrink: 0;
-}
-
-[data-theme="dark"] .form-card-icon {
-  background-color: rgba(37, 99, 235, 0.15);
-  color: #60A5FA;
-}
-
 .form-card-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -1430,21 +1412,7 @@ ul {
 }
 
 .form-card-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  background-color: var(--light-blue);
-  color: var(--brand-blue);
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-md);
-  flex-shrink: 0;
-}
-
-[data-theme="dark"] .form-card-icon {
-  background-color: rgba(37, 99, 235, 0.15);
-  color: #60A5FA;
+  display: none;
 }
 
 .form-card-title {
