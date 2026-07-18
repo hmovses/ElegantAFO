@@ -22,4 +22,3 @@ Then open http://localhost:8080 in your browser.
 
 - Phone: (818) 430-6416
 - Email: elegantafo@gmail.com
-- Address: 22250 Strathern St. Los Angeles, CA 91304
