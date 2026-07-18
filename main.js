@@ -1,5 +1,5 @@
 /* ============================================================
-   ELEGANT AFO ORTHOTICS - MAIN JAVASCRIPT
+   ElegantAFO ORTHOTICS - MAIN JAVASCRIPT
    ============================================================ */
 
 (function () {
