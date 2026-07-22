@@ -506,12 +506,17 @@ ul {
   align-items: center;
   min-height: 100vh;
   padding-top: var(--nav-height);
-  background: linear-gradient(135deg, var(--bg-body) 0%, var(--light-blue) 50%, var(--bg-body) 100%);
+  background:
+    linear-gradient(135deg, rgba(11, 17, 32, 0.82) 0%, rgba(11, 17, 32, 0.55) 50%, rgba(11, 17, 32, 0.82) 100%),
+    url('https://images.unsplash.com/photo-1502252430442-aac78f397426?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
 [data-theme="dark"] .hero {
-  background: linear-gradient(135deg, var(--bg-body) 0%, var(--bg-section-alt) 50%, var(--bg-body) 100%);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-overlay {
@@ -539,14 +544,14 @@ ul {
   font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 800;
   line-height: 1.15;
-  color: var(--text-primary);
+  color: #FFFFFF;
   margin-bottom: var(--space-lg);
   letter-spacing: -0.025em;
 }
 
 .hero-subtitle {
   font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.75;
   margin-bottom: var(--space-2xl);
   max-width: 600px;
@@ -558,6 +563,18 @@ ul {
   flex-wrap: wrap;
   gap: var(--space-md);
   justify-content: center;
+}
+
+.hero .btn-secondary {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero .btn-secondary:hover,
+.hero .btn-secondary:focus-visible {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hero-image-area {
