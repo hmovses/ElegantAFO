@@ -507,7 +507,7 @@ ul {
   min-height: 100vh;
   padding-top: var(--nav-height);
   background:
-    linear-gradient(135deg, rgba(11, 17, 32, 0.25) 0%, rgba(11, 17, 32, 0.05) 50%, rgba(11, 17, 32, 0.25) 100%),
+    linear-gradient(135deg, rgba(11, 17, 32, 0.10) 0%, rgba(11, 17, 32, 0.02) 50%, rgba(11, 17, 32, 0.10) 100%),
     url('https://images.unsplash.com/photo-1502252430442-aac78f397426?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
